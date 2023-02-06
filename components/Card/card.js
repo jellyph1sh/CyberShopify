@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 
-const Product = ({ name, price, description,subDescription,link,img }) => {
+const Card = ({ name, price, description,subDescription,link,img }) => {
   return (
     <div className={styles.products}>
       <div className={styles.product}>
@@ -18,4 +18,4 @@ const Product = ({ name, price, description,subDescription,link,img }) => {
   );
 };
 
-export default Product;
+export default Card;

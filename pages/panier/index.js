@@ -54,54 +54,89 @@ const Index = () => {
         show: false,
         data: []
     })
+   
+    let total = 0;
+    getTotalPrice(products)
+    let nbProducts = getTotalProducts(products)
+       
+      function getTotalPrice(array) {
+        
+        array.forEach((element) => {
+          
+          total += element.price;
+        });
+           
+        return total;
+      } 
+      function getTotalProducts(array) {           
+        return array.length;
+      }
 
     return (
-        <div className={styles.content}>
-            <Nav/>
-            {products.map(product => (
-                <div key={product.id} className={styles.listItem} onClick={() => setState({
-                    show: true,
-                    name: product.name,
-                    price: product.price,
-                    id: product.id,
-                    image : product.image,
-                })}>
-                    <img className={styles.imageProduct} src={product.image}></img>
-                    <h2 className={styles.text}>{product.name}</h2>
-                    <p className={styles.text}>{product.price} €</p>
-                </div>
-            ))}
+        <div className={styles.container}>
+            <div className={styles.content}>
+                {/* <Nav/> */}
+                
+            
+                {products.map(product => (
+                    
+                    <div key={product.id} className={styles.listItem} onClick={() => setState({
+                        show: true,
+                        name: product.name,
+                        price: product.price,
+                        id: product.id,
+                        image : product.image,
+                        
+                    })}>
+                        <img className={styles.imageProduct} src={product.image}></img>
+                        <h2 className={styles.text}>{product.name}</h2>
+                        <p className={styles.text}>{product.price} €</p>
+                        
+                    </div>
+                
+                    ))}
 
-            {state.show === true &&
-                <div className={styles.backgroundModalProduct}>
-                    <div className={styles.btnClose} onClick={() => setState({
-                        show: false,
-                        name: "",
-                        price: "",
-                        id: "",
-                    })}>X</div>
-                    <div className={styles.modalProduct}>
-                        <h2 className={styles.text}>{state.name}</h2>
-                        <p className={styles.text}>{state.price} €</p>
-                        {/* <p className={styles.text}>{state.id}</p> */}
-                        <div className={styles.btnModal}>
-                            <button onClick={() => setState({
-                                show: false,
-                                name: "",
-                                price: "",
-                                id: "",
-                            })}>Accepter</button>
-                            <button onClick={() => setState({
-                                show: false,
-                                name: "",
-                                price: "",
-                                id: "",
-                            })}>Refuser</button>
+                {state.show === true &&
+                    <div className={styles.backgroundModalProduct}>
+                        <div className={styles.btnClose} onClick={() => setState({
+                            show: false,
+                            name: "",
+                            price: "",
+                            id: "",
+                        })}>X</div>
+                        <div className={styles.modalProduct}>
+                            <h2 className={styles.text}>{state.name}</h2>
+                            <p className={styles.text}>{state.price} €</p>
+                            {/* <p className={styles.text}>{state.id}</p> */}
+                            <div className={styles.btnModal}>
+                                <button onClick={() => setState({
+                                    show: false,
+                                    name: "",
+                                    price: "",
+                                    id: "",
+                                })}>Accepter</button>
+                                <button onClick={() => setState({
+                                    show: false,
+                                    name: "",
+                                    price: "",
+                                    id: "",
+                                })}>Refuser</button>
+                            </div>
                         </div>
                     </div>
+                }
+                <div></div>
+            </div>
+            <div className={styles.totalContainer}>
+                <h1 className={styles.text}>Commande :</h1>
+                <div className={styles.displayTotal}>
+                    <p className={styles.text}> Nombre de produits : {nbProducts}</p>
+                    <span className={styles.underline}></span>
+                    <p className={styles.text}> Total prix : {total} €</p>
                 </div>
-            }
-
+                <button className={styles.button}>Paiement</button>
+            </div>
+            
         </div>
     );
 };

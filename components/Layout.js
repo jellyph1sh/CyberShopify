@@ -104,10 +104,6 @@ export default function Home() {
                     ))}
                 </div>
             </main>
-
-            <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Site de vente</p>
-      </footer>
         </div>
     )
 }

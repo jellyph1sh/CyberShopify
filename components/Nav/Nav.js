@@ -20,7 +20,7 @@ const Nav = () => {
                     <ul>
                         <Link className={styles.navbarLi} href="/">Accueil</Link>
                         <Link className={styles.navbarLi} href="">Contact</Link>
-                        <Link className={styles.navbarLi} href="/commande">Commande</Link>
+                        {/* <Link className={styles.navbarLi} href="/commande">Commande</Link> */}
                         <Link className={styles.navbarLi} href="/panier">
                             <img src={"/paniers.png"} width="25px" height="25px"/>
                         </Link>

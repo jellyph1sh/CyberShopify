@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './commande.module.css'
+import styles from "@/pages/commande/commande.module.css";
 import Nav from "@/components/Nav/Nav";
 
 const Index = () => {

@@ -5,11 +5,49 @@ import Nav from "@/components/Nav/Nav";
 const Index = () => {
 
     const products = [
-        {id: 1, name: 'Product 1', price: 29.99},
-        {id: 2, name: 'Product 2', price: 39.99},
-        {id: 3, name: 'Product 3', price: 49.99},
-        {id: 4, name: 'Product 4', price: 59.99},
-        {id: 5, name: 'Product 5', price: 69.99}
+        {
+            id: 1,
+            name: 'Objet 1',
+            price: 29.99,
+            quantity: 5,
+            image: "https://picsum.photos/200/300",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            id: 2,
+            name: 'Objet 2',
+            price: 39.99,
+            quantity: 5,
+            image: 'https://picsum.photos/200/300',
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. hgbgb",
+            subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            id: 3,
+            name: 'Objet 3',
+            price: 49.99,
+            quantity: 5,
+            image: 'https://picsum.photos/200/300',
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            id: 4,
+            name: 'Objet 4',
+            price: 59.99,
+            quantity: 5,
+            image: 'https://picsum.photos/200/300',
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        {
+            id: 5,
+            name: 'Objet 5',
+            price: 69.99,
+            quantity: 5,
+            image: 'https://picsum.photos/200/300',
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        }
     ]
 
     const [state, setState] = useState({
@@ -26,9 +64,11 @@ const Index = () => {
                     name: product.name,
                     price: product.price,
                     id: product.id,
+                    image : product.image,
                 })}>
-                    <h2>{product.name}</h2>
-                    <p>{product.price} €</p>
+                    <img className={styles.imageProduct} src={product.image}></img>
+                    <h2 className={styles.text}>{product.name}</h2>
+                    <p className={styles.text}>{product.price} €</p>
                 </div>
             ))}
 
@@ -41,22 +81,22 @@ const Index = () => {
                         id: "",
                     })}>X</div>
                     <div className={styles.modalProduct}>
-                        <h2>{state.name}</h2>
-                        <p>{state.price} €</p>
-                        <p>{state.id}</p>
+                        <h2 className={styles.text}>{state.name}</h2>
+                        <p className={styles.text}>{state.price} €</p>
+                        {/* <p className={styles.text}>{state.id}</p> */}
                         <div className={styles.btnModal}>
                             <button onClick={() => setState({
                                 show: false,
                                 name: "",
                                 price: "",
                                 id: "",
-                            })}>Accept</button>
+                            })}>Accepter</button>
                             <button onClick={() => setState({
                                 show: false,
                                 name: "",
                                 price: "",
                                 id: "",
-                            })}>Refuse</button>
+                            })}>Refuser</button>
                         </div>
                     </div>
                 </div>

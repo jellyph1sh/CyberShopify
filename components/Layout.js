@@ -12,7 +12,7 @@ export default function Home() {
             name: 'Objet 1',
             price: 29.99,
             quantity: 5,
-            image: "https://picsum.photos/200/300",
+            image: "https://picsum.photos/200",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
             subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
@@ -21,8 +21,8 @@ export default function Home() {
             name: 'Objet 2',
             price: 39.99,
             quantity: 5,
-            image: 'https://picsum.photos/200/300',
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. hgbgb",
+            image: 'https://picsum.photos/200',
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
@@ -30,7 +30,7 @@ export default function Home() {
             name: 'Objet 3',
             price: 49.99,
             quantity: 5,
-            image: 'https://picsum.photos/200/300',
+            image: 'https://picsum.photos/200',
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
             subDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
@@ -39,7 +39,7 @@ export default function Home() {
             name: 'Objet 4',
             price: 59.99,
             quantity: 5,
-            image: 'https://picsum.photos/200/300',
+            image: 'https://picsum.photos/200',
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         {
@@ -47,9 +47,17 @@ export default function Home() {
             name: 'Objet 5',
             price: 69.99,
             quantity: 5,
-            image: 'https://picsum.photos/200/300',
+            image: 'https://picsum.photos/200',
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-        }
+        },
+        {
+          id: 6,
+          name: 'Objet 6',
+          price: 69.99,
+          quantity: 5,
+          image: 'https://picsum.photos/200',
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      }
     ]
 
     const [panier, setPanier] = useState([])
@@ -97,9 +105,9 @@ export default function Home() {
                 </div>
             </main>
 
-            {/* <footer className={styles.footer}>
+            <footer className={styles.footer}>
         <p>&copy; {new Date().getFullYear()} Site de vente</p>
-      </footer> */}
+      </footer>
         </div>
     )
 }

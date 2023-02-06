@@ -1,0 +1,76 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.listItem {
+    display: flex;
+    width: 50%;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backgroundModalProduct {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modalProduct {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 40vh;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btnModal{
+    display: flex;
+}
+.btnModal > button:nth-child(1){
+    border: none;
+    outline: none;
+    background: green;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.btnModal > button:nth-child(2){
+    border: none;
+    outline: none;
+    background: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.btnClose{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

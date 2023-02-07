@@ -10,15 +10,15 @@ const Index = () => {
                 <div class="containerColumn" id="containerColGap">
                 <div className={styles.title} >Login</div>
                     <div class="form-example">
-                        <label className={styles.label} for="name">Adresse e-mail * </label>
+                        <label className={styles.label} for="name">E-mail * </label>
                         <input className={styles.input} type="text" placeholder="saisissez votre e-mail" name="name" required/>
                     </div>
                     <div class="form-example">
-                        <label className={styles.label} for="email">Mot de passe * </label>
+                        <label className={styles.label} for="email">Password * </label>
                         <input className={styles.input} type="password" placeholder="saisissez votre mot de passe" name="password" required/>
                     </div>
                     <div class="form-example">
-                        <button className={styles.btn} type="submit" value="Subscribe!">Valider</button>
+                        <button className={styles.btn} type="submit" value="Subscribe!">Confirm</button>
                     </div>
                 </div>
                 </form>

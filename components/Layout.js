@@ -32,7 +32,7 @@ export default function Layout() {
             <Nav/>
 
             <main className={styles.main}>
-                <h2>Nos produits</h2>
+                <h2>Our products : </h2>
                 <div className={styles.products}>
                     {products.map((card) => (
                         <div key={card.id_product} className={styles.products}>
@@ -48,7 +48,7 @@ export default function Layout() {
                                             price: card.price
                                         }]
                                 )}>
-                                    Acheter
+                                    Buy
                                 </div>}
                             />
                         </div>

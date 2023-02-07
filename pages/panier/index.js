@@ -38,7 +38,7 @@ const Index = () => {
       <div className={styles.content}>
         <Nav />
 
-        <p className={styles.text}>Votre panier :</p>
+        <p className={styles.text}>Your shopping cart :</p>
         <span id={styles.underlineBasket} className={styles.underline}></span>
         {cartItems.map((product, index) => (
           <div
@@ -105,17 +105,17 @@ const Index = () => {
         <div></div>
       </div>
       <div className={styles.totalContainer}>
-        <h1 className={styles.text}>Commande :</h1>
+        <h1 className={styles.text}>Purchase :</h1>
         <span id={styles.underlineCommande} className={styles.underline}></span>
         <div className={styles.displayTotal}>
-          <p className={styles.text}> Nombre de produits : {cartItems.length}</p>
+          <p className={styles.text}> Number of products : {cartItems.length}</p>
           <span
             id={styles.underlineSeparate}
             className={styles.underline}
           ></span>
-          <p className={styles.text}> Total prix : {getTotalPrice(cartItems).toFixed(2)} €</p>
+          <p className={styles.text}> Total price : {getTotalPrice(cartItems).toFixed(2)} €</p>
         </div>
-        <button className={styles.button}>Paiement</button>
+        <button className={styles.button}>Payment</button>
       </div>
     </div>
   );

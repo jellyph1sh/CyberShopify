@@ -19,7 +19,7 @@ const Nav = () => {
                 </div>
                 <nav className={styles.navbar}>
                     <ul>
-                        <Link className={styles.navbarLi} href="/">Accueil</Link>
+                        <Link className={styles.navbarLi} href="/">HOME</Link>
                         <Link className={styles.navbarLi} href="/contact">Contact</Link>
                         {/* <Link className={styles.navbarLi} href="/commande">Commande</Link> */}
                         <Link className={styles.navbarLi} href="/login">Login</Link>

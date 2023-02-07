@@ -170,8 +170,6 @@
   background-color: #3e54d0;
 }
 
-
-
 .footer {
   background-color:#011130;
   color: #fff;
@@ -182,4 +180,5 @@
   left: 0;
   right: 0;
   font-size: 18px;
+  z-index: 999;
 }

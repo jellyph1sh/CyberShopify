@@ -1,7 +1,6 @@
 import styles from '../../styles/Home.module.css'
 
 const Card = ({name, price, description, img, btn}) => {
-
     return (
         <div className={styles.product}>
             <img className={styles.img} src={img}></img>

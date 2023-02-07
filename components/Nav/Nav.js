@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react';
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -5,12 +6,12 @@ import Link from "next/link";
 const Nav = () => {
     return (
         <div className={styles.container}>
-            <head>
+            <Head>
                 <title>Site de vente</title>
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" />
                 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet"></link>
-            </head>
+            </Head>
             <header className={styles.header}>
                 <h1>CYBER SHOPIFY</h1>
                 <div className="image">

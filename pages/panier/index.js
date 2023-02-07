@@ -75,9 +75,10 @@ const Index = () => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                {/* <Nav/> */}
+                <Nav/>
                 
-            
+                <p className={styles.text}>Votre panier :</p>
+                <span id={styles.underlineBasket} className={styles.underline}></span>  
                 {products.map(product => (
                     
                     <div key={product.id} className={styles.listItem} onClick={() => setState({
@@ -91,7 +92,6 @@ const Index = () => {
                         <img className={styles.imageProduct} src={product.image}></img>
                         <h2 className={styles.text}>{product.name}</h2>
                         <p className={styles.text}>{product.price} €</p>
-                        
                     </div>
                 
                     ))}
@@ -107,7 +107,7 @@ const Index = () => {
                         <div className={styles.modalProduct}>
                             <h2 className={styles.text}>{state.name}</h2>
                             <p className={styles.text}>{state.price} €</p>
-                            {/* <p className={styles.text}>{state.id}</p> */}
+                            <p className={styles.text}>{state.id}</p>
                             <div className={styles.btnModal}>
                                 <button onClick={() => setState({
                                     show: false,
@@ -129,9 +129,10 @@ const Index = () => {
             </div>
             <div className={styles.totalContainer}>
                 <h1 className={styles.text}>Commande :</h1>
+                <span id={styles.underlineCommande} className={styles.underline}></span>
                 <div className={styles.displayTotal}>
                     <p className={styles.text}> Nombre de produits : {nbProducts}</p>
-                    <span className={styles.underline}></span>
+                    <span id={styles.underlineSeparate} className={styles.underline}></span>
                     <p className={styles.text}> Total prix : {total} €</p>
                 </div>
                 <button className={styles.button}>Paiement</button>

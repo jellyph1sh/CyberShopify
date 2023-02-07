@@ -13,7 +13,7 @@ const Nav = () => {
             </head>
             <header className={styles.header}>
                 <h1>CYBER SHOPIFY</h1>
-                <div class="image">
+                <div className="image">
                     <img className={styles.headerLogo} src="https://zupimages.net/up/23/06/yj4l.png"/>
                 </div>
                 <nav className={styles.navbar}>
@@ -21,6 +21,8 @@ const Nav = () => {
                         <Link className={styles.navbarLi} href="/">Accueil</Link>
                         <Link className={styles.navbarLi} href="">Contact</Link>
                         {/* <Link className={styles.navbarLi} href="/commande">Commande</Link> */}
+                        <Link className={styles.navbarLi} href="/login">Login</Link>
+                        <Link className={styles.navbarLi} href="/register">Register</Link>
                         <Link className={styles.navbarLi} href="/panier">
                             <img src={"/paniers.png"} width="25px" height="25px"/>
                         </Link>

@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    margin: 5rem 0;
+    justify-content: center;
+}
+
+.form{
+    justify-content: center;
+}
+
+.label{
+    min-width: 15rem;
+    width: max-content;
+    font-size: 1.5rem;
+}
+
+.button{
+    align-self: center;
+    width: 5rem;
+    height: 1rem;
+}

@@ -1,22 +1,24 @@
 .content {
-    width: 80vw;
+    width: max-content;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 109px;
 }
 
 .listItem {
     display: flex;
     flex-direction: row ;
-    width: 50%;
+    min-width: 35rem;
+    width: max-content;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 10px;
     border-radius: 15px;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.15s ease-in-out;
 }
 
 .backgroundModalProduct {
@@ -43,6 +45,11 @@
     align-items: center;
     gap: 15px;
 }
+
+.listItem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
 
 .btnModal{
     display: flex;
@@ -80,71 +87,87 @@
 }
 
 .imageProduct{
-    width: 5rem;
-    height:5rem;
+    width: 4rem;
+    height:4rem;
     border-radius: 15px;
 }
 
 .text {
+    width: max-content;
     padding: 0 1rem;
     font-size: 25px;
     color: black;
     font-weight: 600;
     font-family: monospace;
-  }
+}
 
-  .text h2{
+.text h2{
    font-weight: bold;
-  }
+}
 
-  .text h1{
+.text h1{
     font-size: 32px;
-   }
+}
 
-  .container{
+.container{
+    justify-content: center;
+    align-content: center;
     display: flex;
     flex-direction: row;
-  }
+    gap: 7rem;
+}
 
-  .totalContainer{
+.totalContainer{
     height: 100%;
-    justify-content: center;
-    margin-top: 10rem;
-    margin-right: 2rem;
-    background-color: lightgray;
+    padding:1rem 0;
+    margin-top: 12.2rem;
+    /* margin-right: 13rem; */
+    background-color: rgb(232, 232, 232);
     display: flex;
     flex-direction: column;
+    border: 5px solid #011130;
     border-radius: 15px;
-  }
+}
 
-  .displayTotal{
+.displayTotal{
     width: max-content;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     background-color: white;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 15px;
-  }
+}
 
-  .underline{
-    align-self: center;
+#underlineCommande{
+    margin-left: 1rem;
+    align-self: flex-start;
+    width: 40%;
+}
+
+#underlineBasket{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 60%;
+}
+#underlineSeparate{
     height: 0.1rem;
     width: 100%;
-    margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
+}
+
+.underline{
+    align-self: center;
+    height: 0.2rem;
     border-radius: 999px;
     background-color: #011130;
-  }
+}
 
-  .button {
+.button {
     background-color: #01153e;
-    /* margin: 0rem 5rem; */
     color: #fff;
-    /* padding: 10px 0px; */
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -154,11 +177,11 @@
     text-decoration: none;
     border: 2px solid #011130;
     transition: all 0.2s ease-in-out;
-  }
+}
 
-  .button:hover {
+.button:hover {
     color: white;
     border: 2px solid #233dcf;
     background-color: #233dcf;
-  }
+}
 

@@ -10,6 +10,7 @@ export default function Home() {
 
   const products = [
     {
+      key: Math.random(),
       id: 1,
       name: "Objet 1",
       price: 29.99,
@@ -20,6 +21,7 @@ export default function Home() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
+        key: Math.random(),
       id: 2,
       name: "Objet 2",
       price: 39.99,
@@ -30,6 +32,7 @@ export default function Home() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
+    key: Math.random(),
       id: 3,
       name: "Objet 3",
       price: 49.99,
@@ -40,6 +43,7 @@ export default function Home() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
+        key: Math.random(),
       id: 4,
       name: "Objet 4",
       price: 59.99,
@@ -48,6 +52,7 @@ export default function Home() {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     },
     {
+        key: Math.random(),
       id: 5,
       name: "Objet 5",
       price: 69.99,
@@ -56,6 +61,7 @@ export default function Home() {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     },
     {
+        key: Math.random(),
       id: 6,
       name: "Objet 6",
       price: 69.99,
@@ -75,6 +81,7 @@ export default function Home() {
 
     const itemIndex = cart.findIndex((item) => item.id === product.id);
     cart.push({
+        key: product.key,
       id: product.id,
       name: product.name,
       price: product.price,

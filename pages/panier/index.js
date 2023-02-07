@@ -4,64 +4,19 @@ import Nav from "@/components/Nav/Nav";
 import Cookies from "js-cookie";
 
 const Index = () => {
-  const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(() => {
+        const cartFromCookie = Cookies.get("cart");
+        return cartFromCookie ? JSON.parse(cartFromCookie) : [];
+      });
+    
+      useEffect(() => {
+        Cookies.set("cart", JSON.stringify(cartItems));
+      }, [cartItems]);
 
-  useEffect(() => {
-    const cart = Cookies.get("cart");
-    if (cart) {
-      setCartItems(JSON.parse(cart));
-    }
-  }, []);
-
-  const products = [
-    {
-      id: 1,
-      name: "Objet 1",
-      price: 29.99,
-      quantity: 5,
-      image: "https://picsum.photos/200/300",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-      subDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 2,
-      name: "Objet 2",
-      price: 39.99,
-      quantity: 5,
-      image: "https://picsum.photos/200/300",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. hgbgb",
-      subDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 3,
-      name: "Objet 3",
-      price: 49.99,
-      quantity: 5,
-      image: "https://picsum.photos/200/300",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-      subDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 4,
-      name: "Objet 4",
-      price: 59.99,
-      quantity: 5,
-      image: "https://picsum.photos/200/300",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    },
-    {
-      id: 5,
-      name: "Objet 5",
-      price: 69.99,
-      quantity: 5,
-      image: "https://picsum.photos/200/300",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    },
-  ];
+      const removeFromCart = (itemKey) => {
+        setCartItems(cartItems.filter((item) => item.key !== itemKey));
+        console.log(cartItems)
+      };
 
   const [state, setState] = useState({
     show: false,
@@ -85,17 +40,14 @@ const Index = () => {
 
         <p className={styles.text}>Votre panier :</p>
         <span id={styles.underlineBasket} className={styles.underline}></span>
-        {cartItems.map((product) => (
+        {cartItems.map((product, index) => (
           <div
-            key={product.id}
+            key={index}
             className={styles.listItem}
             onClick={() =>
               setState({
                 show: true,
-                name: product.name,
-                price: product.price,
-                id: product.id,
-                img: product.img,
+                key: product.key
               })
             }
           >
@@ -111,10 +63,7 @@ const Index = () => {
               className={styles.btnClose}
               onClick={() =>
                 setState({
-                  show: false,
-                  name: "",
-                  price: "",
-                  id: "",
+                  show: false
                 })
               }
             >
@@ -128,11 +77,9 @@ const Index = () => {
                 <button
                   onClick={() =>
                     setState({
-                      show: false,
-                      name: "",
-                      price: "",
-                      id: "",
-                    })
+                      show: false
+                    },
+                    removeFromCart(state.key))
                   }
                 >
                   Accepter

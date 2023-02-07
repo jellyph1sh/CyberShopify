@@ -54,7 +54,7 @@ const Index = () => {
               })
             }
           >
-            <img className={styles.imageProduct} src={product.img}></img>
+            <img className={styles.imageProduct} src={"https://picsum.photos/200"}></img>
             <h2 className={styles.text}>{product.name}</h2>
             <p className={styles.text}>{product.price} €</p>
           </div>

@@ -7,16 +7,18 @@ const Index = () => {
         <div className={styles.container}>
             <Nav/>
             <form className={styles.form} action="" method="get" class="form-example">
-                <div class="form-example">
-                    <label className={styles.label} for="name">Entrer votre identifiant: </label>
-                    <input type="text" name="name" />
-                </div>
-                <div class="form-example">
-                    <label className={styles.label} for="email">Entrer votre mot de passe: </label>
-                    <input type="password" name="password" />
-                </div>
-                <div class="form-example">
-                    <button className={styles.button} type="submit" value="Subscribe!">Valider</button>
+                <div class="containerColumn" id="containerColGap">
+                    <div class="form-example">
+                        <label className={styles.textareaSign} for="name">Entrer votre identifiant: </label>
+                        <input type="text" name="name" />
+                    </div>
+                    <div class="form-example">
+                        <label className={styles.textareaSign} for="email">Entrer votre mot de passe: </label>
+                        <input type="password" name="password" />
+                    </div>
+                    <div class="form-example">
+                        <button className={styles.buttonStyle} type="submit" value="Subscribe!">Valider</button>
+                    </div>
                 </div>
                 </form>
         </div>

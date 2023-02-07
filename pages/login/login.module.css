@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 15rem;
+    width: max-content;
     margin: 5rem 0;
     justify-content: center;
 }
@@ -10,14 +10,39 @@
     justify-content: center;
 }
 
-.label{
-    min-width: 15rem;
-    width: max-content;
-    font-size: 1.5rem;
-}
 
-.button{
+
+.buttonStyle{
+    background-color: white;
+    border-radius: 999px;
+    text-align: center;
     align-self: center;
     width: 5rem;
-    height: 1rem;
+    height: 3rem;
+    padding: 1rem;
+}
+
+.textareaSign{
+    width: 17vw;
+    font-family: monospace  ;
+    text-align: center;
+    border: 5px solid white;
+    text-Decoration: "none";
+    color: black ;
+    background-color: rgba(255, 255, 255, 0.72);
+    padding: 0.7vw 7vw;
+    font-size: 1vw;
+    border-radius: 99.9vw;
+    font-weight: 700;
+    line-height: 2.4vw;
+    opacity: 1;
+    outline: 0 solid transparent;
+    box-shadow: #111 0 1.0vw 2.0vw -1.0vw;
+}
+
+.containerColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

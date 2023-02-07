@@ -47,6 +47,9 @@ const Index = () => {
             onClick={() =>
               setState({
                 show: true,
+                name: product.name,
+                id: product.id,
+                price: product.price,
                 key: product.key
               })
             }
@@ -70,9 +73,8 @@ const Index = () => {
               X
             </div>
             <div className={styles.modalProduct}>
-              <h2 className={styles.text}>{state.name}</h2>
+              <h2 className={styles.text}> Supprimer {state.name} ?</h2>
               <p className={styles.text}>{state.price} €</p>
-              <p className={styles.text}>{state.id}</p>
               <div className={styles.btnModal}>
                 <button
                   onClick={() =>

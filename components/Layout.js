@@ -4,8 +4,8 @@ import Card from './Card/card'
 import Nav from "@/components/Nav/Nav";
 import React, {useEffect, useState} from "react";
 
-export default function Home() {
-
+export default function Layout() {
+    console.log("test");
     const [panier, setPanier] = useState([]);
     const [products, setProducts] = useState([]);
 

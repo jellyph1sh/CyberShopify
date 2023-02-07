@@ -8,16 +8,17 @@ const Index = () => {
             <Nav/>
             <form className={styles.form} action="" method="get" class="form-example">
                 <div class="containerColumn" id="containerColGap">
+                <div className={styles.title} >Login</div>
                     <div class="form-example">
-                        <label className={styles.textareaSign} for="name">Entrer votre identifiant: </label>
-                        <input type="text" name="name" />
+                        <label className={styles.label} for="name">Adresse e-mail * </label>
+                        <input className={styles.input} type="text" placeholder="saisissez votre e-mail" name="name" required/>
                     </div>
                     <div class="form-example">
-                        <label className={styles.textareaSign} for="email">Entrer votre mot de passe: </label>
-                        <input type="password" name="password" />
+                        <label className={styles.label} for="email">Mot de passe * </label>
+                        <input className={styles.input} type="password" placeholder="saisissez votre mot de passe" name="password" required/>
                     </div>
                     <div class="form-example">
-                        <button className={styles.buttonStyle} type="submit" value="Subscribe!">Valider</button>
+                        <button className={styles.btn} type="submit" value="Subscribe!">Valider</button>
                     </div>
                 </div>
                 </form>

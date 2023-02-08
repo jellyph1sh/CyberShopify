@@ -48,7 +48,7 @@ for (let i = 0; i < ips.length; i++) {
 
 What works :
 
--    a react shop website displaying products from the PHPmyAdmin database (cybershopyfy folder)
+-    a react shop website displaying products from the database (cybershopyfy folder)
 -   an express js API (like a gateway between front and bdd) (cybershopyfy_back folder)
 -   an express js JWT (backend to make login and register functionnal in front)
 <img src="https://zupimages.net/up/23/06/x67k.png" width=600px>

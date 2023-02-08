@@ -22,7 +22,7 @@ This project required a mastery of those following notions :
 - Master the syntax of NEXT/REACT
 - Master the syntax of express.js for the backend (you can find this part in the folder "CyberShopify_back")
 - Set an API to manage the interaction with different databases
-- Know how to interact with a SQL database with PHPMyAdmin from an API
+- Know how to interact with a SQL database from an API
 - Compose web pages in  while avoiding repetition
 
 <img src="https://zupimages.net/up/23/06/6j5n.png" width=600px>
@@ -32,6 +32,19 @@ This project required a mastery of those following notions :
 The project consisted mainly of reflecting on a decentralization solution ! We thought of updating an "ip list" table for each bdd server (= commerce). This list would contain the ip of non-balcklisted stores! It would then be on the API side, that we would make sure that only the data from the authorized server is displayed.
 
 To manage authorization, we can imagine generating a jwt (as we did for backend authentication). After having checked that the ip of a server is valid, we could generate a jwt token and each time we will check the validation of the connection!
+
+As you can see, we have made a function for the api that handles IPs. Depending on the IPs present in the fictitious table "list ip", the function will return urls linked to APIs of other specific servers!
+
+```
+const ips = [];
+
+for (let i = 0; i < ips.length; i++) {
+    app.get(`/getdb/${ips[i]}`, (_, resp) => {
+        fetch(`http://${ips[i]}:5000/`)
+        .then(res => res.json())
+        .then(res => resp.json(res))
+    });
+```
 
 What works :
 

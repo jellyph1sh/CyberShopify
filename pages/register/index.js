@@ -29,7 +29,7 @@ const Index = () => {
 
         const data = await res.json();
 
-        router.push('/login');
+        router.push('/login');//redirection après connexion.
     }
 
     return (

@@ -6,7 +6,7 @@
 Let's introduce ourselves ! We are : **GUENARD Juliette B2**, **CHAFFAUX Kévin B1**, **SORGIATI Sacha B1**, **NZONZA Tayvadi B1** and we are this website's developers : CyberShopify.
 This project consists of the implementation of a Proof of Concept of decentralized online store allowing small and medium-sized merchants to free themselves from large centralized marketplaces.
 
-<img src=https://zupimages.net/up/23/06/yj4l.png width=300px>
+<img src=https://zupimages.net/up/23/06/yj4l.png width=100px>
 
 This will involve:
 
@@ -14,7 +14,7 @@ This will involve:
 -  display several pruducts on differents shops from different data bases .
 - To solve the "decentralized" problem, we think about a particular infrastructure illustrated by our little solution just here:
 
-<img src=https://zupimages.net/up/23/06/wy73.png width=300px>
+<img src=https://zupimages.net/up/23/06/wy73.png width=500px>
 
 </br>
 This project required a mastery of those following notions :
@@ -25,7 +25,7 @@ This project required a mastery of those following notions :
 - Know how to interact with a SQL database with PHPMyAdmin from an API
 - Compose web pages in  while avoiding repetition
 
-<img src="https://zupimages.net/up/23/06/6j5n.png" width=300px>
+<img src="https://zupimages.net/up/23/06/6j5n.png" width=600px>
 
 ## **What is functionnal ?**
 
@@ -38,7 +38,7 @@ What works :
 -    a react shop website displaying products from the PHPmyAdmin database (cybershopyfy folder)
 -   an express js API (like a gateway between front and bdd) (cybershopyfy_back folder)
 -   an express js JWT (backend to make login and register functionnal in front)
-<img src="https://zupimages.net/up/23/06/x67k.png" width=300px>
+<img src="https://zupimages.net/up/23/06/x67k.png" width=600px>
 
 -   login and register functionnal on the website !
 
@@ -84,4 +84,4 @@ node index.js(make sure you installed nodeamon)
 >GUENARD Juliette  https://github.com/julietteGUE16<br/>
 >CHAFFAUX Kévin https://github.com/typhnz<br/>
 >SORGIATI Sacha https://github.com/jellyph1sh<br/>
->CHAFFAUX Kévin
+>CHAFFAUX Kévin https://github.com/NockIA
